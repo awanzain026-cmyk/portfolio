@@ -20,7 +20,7 @@ const projects = [
     image: "/bizflow.png",
     tags: ["Next.js 14", "TypeScript", "Tailwind CSS", "Framer Motion", "AI (sodeom)", "Recharts", "jsPDF"],
     links: {
-      live: "https://bizflow-eta.vercel.app",
+      live: "https://biz-flow-3bha.vercel.app",
       github: "https://github.com/awanzain026-cmyk/BizFlow",
     },
   },
