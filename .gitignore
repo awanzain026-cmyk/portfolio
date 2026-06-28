@@ -37,8 +37,9 @@ yarn-error.log*
 # vercel
 .vercel
 
-# separate project (own repo)
+# separate projects (own repos)
 /finsight/
+/nexbot/
 
 # typescript
 *.tsbuildinfo
