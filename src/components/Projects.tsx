@@ -14,6 +14,17 @@ const projects = [
     },
   },
   {
+    title: "BizFlow — AI Business Suite",
+    description:
+      "A complete business management suite for Pakistani entrepreneurs. Features AI-powered invoice generation with professional PDF export, client management with payment tracking, expense logging with category analytics, and intelligent business insights. Built with GST support, WhatsApp sharing, and interactive Recharts dashboards.",
+    image: "/bizflow.png",
+    tags: ["Next.js 14", "TypeScript", "Tailwind CSS", "Framer Motion", "AI (sodeom)", "Recharts", "jsPDF"],
+    links: {
+      live: "https://bizflow-eta.vercel.app",
+      github: "https://github.com/awanzain026-cmyk/BizFlow",
+    },
+  },
+  {
     title: "Grade Tracker System",
     description:
       "A comprehensive system for tracking and analyzing student grades across multiple subjects. Features automated GPA calculation, performance trends, and progress reports.",
