@@ -25,6 +25,16 @@ const projects = [
     },
   },
   {
+    title: "NexBot — AI Chatbot Builder",
+    description:
+      "A SaaS platform where any business owner can create a custom AI chatbot for their website in minutes — without coding. Features a 4-step wizard builder, real-time preview with GPT-4o responses, analytics dashboard, and one-click website embed. Demo includes Ahmad's Restaurant with full menu, hours, and FAQ handling.",
+    image: "/nexbot.png",
+    tags: ["Next.js 14", "TypeScript", "Tailwind CSS", "Framer Motion", "Three.js", "GPT-4o (Sodeom)", "Recharts"],
+    links: {
+      github: "https://github.com/awanzain026-cmyk/NexBot",
+    },
+  },
+  {
     title: "Grade Tracker System",
     description:
       "A comprehensive system for tracking and analyzing student grades across multiple subjects. Features automated GPA calculation, performance trends, and progress reports.",
@@ -136,15 +146,17 @@ export default function Projects() {
                   </div>
                   {hasLinks && (
                     <div className="flex gap-3">
-                      <a
-                        href={project.links.live}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 px-4 py-2 text-xs font-semibold text-white transition-all hover:from-blue-500 hover:to-purple-500"
-                      >
-                        <HiExternalLink className="text-sm" />
-                        Live Demo
-                      </a>
+                      {project.links.live && (
+                        <a
+                          href={project.links.live}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 px-4 py-2 text-xs font-semibold text-white transition-all hover:from-blue-500 hover:to-purple-500"
+                        >
+                          <HiExternalLink className="text-sm" />
+                          Live Demo
+                        </a>
+                      )}
                       <a
                         href={project.links.github}
                         target="_blank"
