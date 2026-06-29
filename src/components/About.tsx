@@ -35,11 +35,11 @@ export default function About() {
             </div>
             <h3 className="mb-4 text-xl font-semibold text-white">Who I Am</h3>
             <p className="leading-relaxed text-zinc-400">
-              I&apos;m Muhammad Zain, a dedicated BS Accounting &amp; Finance student
-              at Bahria University Karachi with a strong passion for financial
-              analysis, business mathematics, and strategic problem-solving. I
-              believe in turning numbers into narratives that drive informed
-              business decisions.
+              I&apos;m Muhammad Zain — a BS Accounting &amp; Finance student at Bahria
+              University Karachi and an aspiring Agentic AI developer. I build
+              intelligent AI agents, automation workflows, and digital tools that
+              bridge finance and technology. I believe in using AI to create
+              practical solutions that make a real impact.
             </p>
           </motion.div>
 

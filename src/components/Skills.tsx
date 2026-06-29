@@ -1,20 +1,23 @@
 import { motion } from "framer-motion";
 import {
-  HiCalculator,
-  HiChartBar,
-  HiBriefcase,
-  HiLightningBolt,
-  HiGlobe,
   HiChip,
+  HiCode,
+  HiLightningBolt,
+  HiCube,
+  HiPencil,
+  HiShare,
 } from "react-icons/hi";
+import { FaBrain, FaRocket } from "react-icons/fa";
 
 const skills = [
-  { name: "Accounting", icon: HiCalculator, color: "text-blue-400", bg: "bg-blue-500/10" },
-  { name: "Financial Analysis", icon: HiChartBar, color: "text-purple-400", bg: "bg-purple-500/10" },
-  { name: "Business Mathematics", icon: HiBriefcase, color: "text-amber-400", bg: "bg-amber-500/10" },
-  { name: "Microeconomics", icon: HiGlobe, color: "text-emerald-400", bg: "bg-emerald-500/10" },
-  { name: "Microsoft Excel", icon: HiChip, color: "text-cyan-400", bg: "bg-cyan-500/10" },
-  { name: "Leadership & Communication", icon: HiLightningBolt, color: "text-rose-400", bg: "bg-rose-500/10" },
+  { name: "AI Agent Development", icon: FaBrain, color: "text-blue-400", bg: "bg-blue-500/10" },
+  { name: "Prompt Engineering", icon: HiLightningBolt, color: "text-purple-400", bg: "bg-purple-500/10" },
+  { name: "LangChain & Frameworks", icon: HiCube, color: "text-amber-400", bg: "bg-amber-500/10" },
+  { name: "LLM Integration", icon: HiChip, color: "text-emerald-400", bg: "bg-emerald-500/10" },
+  { name: "Python Programming", icon: HiCode, color: "text-cyan-400", bg: "bg-cyan-500/10" },
+  { name: "AI Workflow Automation", icon: FaRocket, color: "text-rose-400", bg: "bg-rose-500/10" },
+  { name: "API Development", icon: HiShare, color: "text-indigo-400", bg: "bg-indigo-500/10" },
+  { name: "Tech Blogging", icon: HiPencil, color: "text-teal-400", bg: "bg-teal-500/10" },
 ];
 
 const container = {
@@ -49,11 +52,11 @@ export default function Skills() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          Tools and expertise I bring to the table
+          Technologies and expertise I work with
         </motion.p>
 
         <motion.div
-          className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
+          className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4"
           variants={container}
           initial="hidden"
           whileInView="show"

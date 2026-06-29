@@ -46,7 +46,8 @@ export default function Hero() {
             className="mx-auto mb-8 max-w-2xl text-lg leading-relaxed text-zinc-400 sm:text-xl"
           >
             Accounting &amp; Finance Student{" "}
-            <span className="text-zinc-500">|</span> Aspiring Financial Analyst
+            <span className="text-zinc-500">|</span>{" "}
+            <span className="gradient-text">Agentic AI Developer</span>
           </motion.p>
 
           <motion.p
@@ -55,8 +56,8 @@ export default function Hero() {
             transition={{ delay: 0.35, duration: 0.6 }}
             className="mx-auto mb-10 max-w-xl text-base text-zinc-500"
           >
-            Building financial models today for a data-driven tomorrow. Currently
-            pursuing BS Accounting &amp; Finance at Bahria University Karachi.
+            Building intelligent AI agents and financial models. Passionate about
+            using AI to solve real-world problems and drive business decisions.
           </motion.p>
 
           <motion.div

@@ -20,6 +20,12 @@ body {
   background: #080c14;
   color: #f1f5f9;
   font-family: "Inter", system-ui, sans-serif;
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
 }
 
 ::-webkit-scrollbar {
@@ -56,9 +62,9 @@ body {
 }
 
 .glass-card:hover {
-  border-color: rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.25);
   transform: translateY(-4px);
-  box-shadow: 0 8px 30px rgba(59, 130, 246, 0.08);
+  box-shadow: 0 8px 40px rgba(59, 130, 246, 0.1), 0 0 60px rgba(139, 92, 246, 0.03);
 }
 
 .gradient-text {
@@ -96,6 +102,18 @@ body {
   text-align: center;
   margin-bottom: 3rem;
   font-size: 1.05rem;
+}
+
+.glow {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.15), 0 0 40px rgba(139, 92, 246, 0.05);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #f1f5f9;
+  -webkit-box-shadow: 0 0 0px 1000px #0d1321 inset;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 @media (max-width: 640px) {

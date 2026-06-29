@@ -35,10 +35,15 @@ export default function Navbar() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <motion.a
           href="#hero"
-          className="text-xl font-bold tracking-tight"
+          className="flex items-center gap-2"
           whileHover={{ scale: 1.05 }}
         >
-          <span className="gradient-text">M.Zain</span>
+          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-blue-600 to-purple-600 text-sm font-bold text-white shadow-lg shadow-blue-500/20">
+            MZ
+          </span>
+          <span className="text-lg font-semibold tracking-tight text-white">
+            <span className="gradient-text">M.Zain</span>
+          </span>
         </motion.a>
 
         <div className="hidden items-center gap-8 md:flex">

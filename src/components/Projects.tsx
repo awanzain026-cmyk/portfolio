@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { HiCode, HiDocumentText, HiAcademicCap, HiExternalLink } from "react-icons/hi";
+import { HiExternalLink } from "react-icons/hi";
 
 const projects = [
   {
@@ -33,27 +33,6 @@ const projects = [
     links: {
       github: "https://github.com/awanzain026-cmyk/NexBot",
     },
-  },
-  {
-    title: "Grade Tracker System",
-    description:
-      "A comprehensive system for tracking and analyzing student grades across multiple subjects. Features automated GPA calculation, performance trends, and progress reports.",
-    icon: HiDocumentText,
-    tags: ["Excel", "VBA", "Data Analysis"],
-  },
-  {
-    title: "CR Feedback Form",
-    description:
-      "An anonymous digital feedback platform that enables students to share concerns and suggestions with their Class Representative, ensuring every voice is heard.",
-    icon: HiCode,
-    tags: ["Forms", "Data Collection", "Communication"],
-  },
-  {
-    title: "Study Apps Collection",
-    description:
-      "A curated set of study tools and applications designed to help fellow students manage their academic schedules, track assignments, and prepare for exams efficiently.",
-    icon: HiAcademicCap,
-    tags: ["Productivity", "Education", "Planning"],
   },
 ];
 
