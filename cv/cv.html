@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Muhammad Zain - CV</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+      line-height: 1.6;
+      padding: 40px;
+    }
+
+    .cv-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 4px 60px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #080c14 0%, #0d1321 50%, #131b2e 100%);
+      padding: 48px 48px 40px;
+      color: white;
+      position: relative;
+    }
+
+    .header::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 80% 20%, rgba(59,130,246,0.1), transparent 60%);
+      pointer-events: none;
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .header-left h1 {
+      font-size: 36px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6, #f59e0b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 4px;
+    }
+
+    .header-left .title {
+      font-size: 15px;
+      color: #94a3b8;
+      font-weight: 400;
+    }
+
+    .header-right {
+      text-align: right;
+      font-size: 13px;
+      color: #cbd5e1;
+      line-height: 1.8;
+    }
+
+    .header-right a {
+      color: #60a5fa;
+      text-decoration: none;
+    }
+
+    .body-content {
+      padding: 40px 48px;
+    }
+
+    .section {
+      margin-bottom: 32px;
+    }
+
+    .section-title {
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #3b82f6;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #e2e8f0;
+    }
+
+    .summary {
+      font-size: 14px;
+      color: #334155;
+      line-height: 1.7;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 24px;
+    }
+
+    .skill-item {
+      font-size: 13.5px;
+      color: #334155;
+      padding: 4px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .skill-item::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .edu-item {
+      margin-bottom: 20px;
+    }
+
+    .edu-item:last-child { margin-bottom: 0; }
+
+    .edu-item h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: #0f172a;
+    }
+
+    .edu-item .institution {
+      font-size: 13.5px;
+      color: #475569;
+    }
+
+    .edu-item .period {
+      font-size: 12.5px;
+      color: #64748b;
+      margin-top: 2px;
+    }
+
+    .project-item {
+      margin-bottom: 20px;
+    }
+
+    .project-item:last-child { margin-bottom: 0; }
+
+    .project-item h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: #0f172a;
+    }
+
+    .project-item .tech {
+      font-size: 12px;
+      color: #3b82f6;
+      font-weight: 500;
+      margin: 3px 0;
+    }
+
+    .project-item p {
+      font-size: 13px;
+      color: #475569;
+      line-height: 1.6;
+    }
+
+    .project-item .links {
+      margin-top: 4px;
+    }
+
+    .project-item .links a {
+      font-size: 12px;
+      color: #3b82f6;
+      text-decoration: none;
+      margin-right: 12px;
+    }
+
+    .project-item .links a:hover {
+      text-decoration: underline;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    @media print {
+      body { padding: 0; background: white; }
+      .cv-container { box-shadow: none; border-radius: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="cv-container">
+    <div class="header">
+      <div class="header-content">
+        <div class="header-left">
+          <h1>Muhammad Zain</h1>
+          <div class="title">BS Accounting &amp; Finance | Agentic AI Developer</div>
+        </div>
+        <div class="header-right">
+          Karachi, Pakistan<br>
+          <a href="mailto:zainmalik.622aa@gmail.com">zainmalik.622aa@gmail.com</a><br>
+          +92 311 7780927<br>
+          <a href="https://www.linkedin.com/in/muhammad-zain-359626291">linkedin.com/in/muhammad-zain</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="body-content">
+      <div class="section">
+        <div class="section-title">Professional Summary</div>
+        <p class="summary">
+          BS Accounting &amp; Finance student at Bahria University Karachi with hands-on experience in 
+          building AI-powered applications. Passionate about leveraging artificial intelligence to solve 
+          real-world problems in finance, business operations, and customer support. Currently serving 
+          as Class Representative, demonstrating strong leadership and communication skills. Combines 
+          financial knowledge with modern AI engineering to build practical, scalable solutions.
+        </p>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Skills</div>
+        <div class="skills-grid">
+          <div class="skill-item">AI Agent Development</div>
+          <div class="skill-item">Prompt Engineering</div>
+          <div class="skill-item">LangChain &amp; LLM Frameworks</div>
+          <div class="skill-item">Python Programming</div>
+          <div class="skill-item">AI Workflow Automation</div>
+          <div class="skill-item">API Development &amp; Integration</div>
+          <div class="skill-item">Financial Analysis &amp; Accounting</div>
+          <div class="skill-item">Next.js &amp; TypeScript</div>
+          <div class="skill-item">Tailwind CSS &amp; Modern UI</div>
+          <div class="skill-item">Technical Blogging</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Projects</div>
+
+        <div class="project-item">
+          <h3>TriageDesk — AI Support Console</h3>
+          <div class="tech">AI Agents · Next.js · TypeScript · Real-Time Systems</div>
+          <p>Built a real-time AI-powered customer support triage system with a multi-agent pipeline. Features intent classification, sentiment monitoring, policy validation, resolution execution, and autonomous escalation handling for enterprise-grade support operations.</p>
+          <div class="links">
+            <a href="https://triagedesk.thetrillioniar.me" target="_blank">Live Demo →</a>
+            <a href="https://github.com/TriageDesk/TriageDesk" target="_blank">Source Code →</a>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <h3>FinSight — AI Financial Dashboard</h3>
+          <div class="tech">Next.js · TypeScript · Tailwind CSS · AI · Recharts</div>
+          <p>A full-featured financial management dashboard with multi-currency support (PKR/USD/GBP/AED), inventory tracking, receivables &amp; payables management, AI-powered business insights, PDF report export, and interactive charts for small businesses.</p>
+          <div class="links">
+            <a href="https://fin-sight-beta-pink.vercel.app" target="_blank">Live Demo →</a>
+            <a href="https://github.com/awanzain026-cmyk/FinSight" target="_blank">Source Code →</a>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <h3>BizFlow — AI Business Suite</h3>
+          <div class="tech">Next.js · TypeScript · Tailwind CSS · AI · Framer Motion</div>
+          <p>A complete business management suite for entrepreneurs featuring AI-powered invoice generation with PDF export, client management with payment tracking, expense logging with category analytics, GST support, and WhatsApp sharing.</p>
+          <div class="links">
+            <a href="https://biz-flow-3bha.vercel.app" target="_blank">Live Demo →</a>
+            <a href="https://github.com/awanzain026-cmyk/BizFlow" target="_blank">Source Code →</a>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <h3>NexBot — AI Chatbot Builder</h3>
+          <div class="tech">Next.js · TypeScript · Tailwind CSS · GPT-4o · Three.js</div>
+          <p>A SaaS platform enabling business owners to create custom AI chatbots for their websites without coding. Features a 4-step wizard builder, real-time GPT-4o responses, analytics dashboard, and one-click website embed.</p>
+          <div class="links">
+            <a href="https://github.com/awanzain026-cmyk/NexBot" target="_blank">Source Code →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Education</div>
+
+        <div class="edu-item">
+          <h3>BS Accounting &amp; Finance</h3>
+          <div class="institution">Bahria University, Karachi Campus</div>
+          <div class="period">2025 – Present | Class Representative</div>
+        </div>
+
+        <div class="edu-item">
+          <h3>Intermediate (Pre-Engineering)</h3>
+          <div class="institution">Bahria College Karsaz, Karachi</div>
+          <div class="period">2023 – 2025</div>
+        </div>
+
+        <div class="edu-item">
+          <h3>Matriculation (Computer Science)</h3>
+          <div class="institution">Karachi, Pakistan</div>
+          <div class="period">2021 – 2023</div>
+        </div>
+      </div>
+
+      <div class="section" style="margin-bottom: 0;">
+        <div class="section-title">Languages</div>
+        <p style="font-size: 13.5px; color: #334155;">
+          English (Professional) · Urdu (Native) · Sindhi (Conversational)
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

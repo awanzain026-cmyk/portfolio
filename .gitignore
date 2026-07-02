@@ -41,6 +41,9 @@ yarn-error.log*
 /finsight/
 /nexbot/
 
+# embedded git repos
+research/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

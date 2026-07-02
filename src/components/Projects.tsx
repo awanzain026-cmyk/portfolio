@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { HiExternalLink, HiCode } from "react-icons/hi";
+import { HiExternalLink } from "react-icons/hi";
 
 const projects = [
   {
@@ -38,7 +38,7 @@ const projects = [
     title: "TriageDesk — AI Support Console",
     description:
       "A real-time AI-powered customer support triage system with a multi-agent pipeline. Features intent classification, sentiment monitoring, policy validation, resolution execution, communication drafting, and escalation handling — all orchestrated autonomously. Built for enterprise-grade support operations.",
-    icon: HiCode,
+    image: "/triagedesk.png",
     tags: ["AI Agents", "Multi-Agent Pipeline", "Sentiment Analysis", "Real-Time", "TypeScript", "Next.js"],
     links: {
       live: "https://triagedesk.thetrillioniar.me",

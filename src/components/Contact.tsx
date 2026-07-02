@@ -199,7 +199,8 @@ export default function Contact() {
           transition={{ duration: 0.6, delay: 0.3 }}
         >
           <motion.a
-            href="#"
+            href="/Muhammad_Zain_CV.pdf"
+            download
             className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-3.5 text-sm font-semibold text-white transition-all hover:from-blue-500 hover:to-purple-500 shadow-lg shadow-blue-500/20"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
