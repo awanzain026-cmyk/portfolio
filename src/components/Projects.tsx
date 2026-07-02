@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { HiExternalLink } from "react-icons/hi";
+import { HiExternalLink, HiCode } from "react-icons/hi";
 
 const projects = [
   {
@@ -32,6 +32,17 @@ const projects = [
     tags: ["Next.js 14", "TypeScript", "Tailwind CSS", "Framer Motion", "Three.js", "GPT-4o (Sodeom)", "Recharts"],
     links: {
       github: "https://github.com/awanzain026-cmyk/NexBot",
+    },
+  },
+  {
+    title: "TriageDesk — AI Support Console",
+    description:
+      "A real-time AI-powered customer support triage system with a multi-agent pipeline. Features intent classification, sentiment monitoring, policy validation, resolution execution, communication drafting, and escalation handling — all orchestrated autonomously. Built for enterprise-grade support operations.",
+    icon: HiCode,
+    tags: ["AI Agents", "Multi-Agent Pipeline", "Sentiment Analysis", "Real-Time", "TypeScript", "Next.js"],
+    links: {
+      live: "https://triagedesk.thetrillioniar.me",
+      github: "https://github.com/TriageDesk/TriageDesk",
     },
   },
 ];
