@@ -123,7 +123,7 @@ export default function Contact() {
               <input
                 type="hidden"
                 name="_next"
-                value="https://your-portfolio.vercel.app/thanks.html"
+                value="https://portfolio-flax-tau-30.vercel.app/"
               />
 
               <div className="grid gap-5 sm:grid-cols-2">
