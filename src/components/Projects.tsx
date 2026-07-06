@@ -45,6 +45,16 @@ const projects = [
       github: "https://github.com/TriageDesk/TriageDesk",
     },
   },
+  {
+    title: "MeetMind — AI Meeting Intelligence",
+    description:
+      "An AI-powered meeting intelligence platform with 5 specialized agents that analyze transcripts in seconds. Features instant summaries, action item extraction, sentiment analysis, follow-up email generation, task assignment, and decision tracking — turning any meeting into actionable outcomes.",
+    image: "/meetmind.png",
+    tags: ["AI Agents", "Meeting Intelligence", "Sentiment Analysis", "Next.js", "TypeScript", "Tailwind CSS"],
+    links: {
+      live: "https://meet-mind-8bju.vercel.app",
+    },
+  },
 ];
 
 const container = {
