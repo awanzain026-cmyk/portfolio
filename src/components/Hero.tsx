@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { HiArrowRight, HiDownload } from "react-icons/hi";
+import { HiArrowRight } from "react-icons/hi";
 
 export default function Hero() {
   return (
@@ -7,11 +7,14 @@ export default function Hero() {
       id="hero"
       className="relative flex min-h-screen items-center justify-center overflow-hidden px-6"
     >
-      {/* Background gradient orbs */}
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-40 -left-40 h-96 w-96 rounded-full bg-blue-500/10 blur-[120px]" />
-        <div className="absolute -bottom-40 -right-40 h-96 w-96 rounded-full bg-purple-500/10 blur-[120px]" />
-        <div className="absolute top-1/2 left-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-amber-500/5 blur-[100px]" />
+      {/* Signature background element: large faint serif monogram, no blur orbs */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 flex items-center justify-center select-none"
+      >
+        <span className="font-display text-[26rem] font-medium leading-none text-white/[0.025] sm:text-[34rem]">
+          MZ
+        </span>
       </div>
 
       <div className="relative z-10 mx-auto max-w-4xl text-center">
@@ -33,7 +36,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="mb-6 text-4xl font-bold leading-tight sm:text-5xl md:text-6xl lg:text-7xl"
+            className="font-display mb-6 text-4xl font-medium leading-tight sm:text-5xl md:text-6xl lg:text-7xl"
           >
             Hi, I&apos;m{" "}
             <span className="gradient-text">Muhammad Zain</span>
@@ -66,24 +69,20 @@ export default function Hero() {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="flex flex-col items-center justify-center gap-4 sm:flex-row"
           >
-            <motion.a
+            <a
               href="#projects"
-              className="group flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-3.5 text-sm font-semibold text-white transition-all hover:from-blue-500 hover:to-purple-500"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              className="btn-press group flex items-center gap-2 rounded-full bg-accent px-8 py-3.5 text-sm font-semibold text-[#14120f] transition-colors hover:bg-[#dd934f]"
             >
               View My Work
               <HiArrowRight className="transition-transform group-hover:translate-x-1" />
-            </motion.a>
+            </a>
 
-            <motion.a
+            <a
               href="#contact"
-              className="gradient-border rounded-full px-8 py-3.5 text-sm font-semibold text-zinc-300 transition-colors hover:text-white"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              className="gradient-border btn-press rounded-full px-8 py-3.5 text-sm font-semibold text-zinc-300 transition-colors hover:text-white"
             >
               Hire Me
-            </motion.a>
+            </a>
           </motion.div>
 
           <motion.div

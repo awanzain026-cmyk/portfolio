@@ -1,15 +1,19 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-dark-bg: #080c14;
-  --color-dark-surface: #0d1321;
-  --color-dark-card: #131b2e;
-  --color-dark-border: rgba(148, 163, 184, 0.1);
-  --color-accent-blue: #3b82f6;
-  --color-accent-purple: #8b5cf6;
-  --color-accent-gold: #f59e0b;
-  --color-text-primary: #f1f5f9;
-  --color-text-secondary: #94a3b8;
+  --color-dark-bg: #14120f;
+  --color-dark-surface: #1c1916;
+  --color-dark-card: #211d19;
+  --color-dark-border: rgba(245, 241, 234, 0.08);
+  --color-accent-blue: #c97b3d;
+  --color-accent-purple: #c97b3d;
+  --color-accent-gold: #c97b3d;
+  --color-accent: #c97b3d;
+  --color-accent-soft: rgba(201, 123, 61, 0.12);
+  --color-text-primary: #f5f1ea;
+  --color-text-secondary: #a39a8c;
+  --font-sans: "Manrope", system-ui, sans-serif;
+  --font-display: "Fraunces", Georgia, serif;
 }
 
 * {
@@ -17,9 +21,9 @@
 }
 
 body {
-  background: #080c14;
-  color: #f1f5f9;
-  font-family: "Inter", system-ui, sans-serif;
+  background: #14120f;
+  color: #f5f1ea;
+  font-family: var(--font-sans);
   opacity: 0;
   animation: fadeIn 0.5s ease forwards;
 }
@@ -33,92 +37,89 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #080c14;
+  background: #14120f;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #3b82f6, #8b5cf6);
+  background: #c97b3d;
   border-radius: 3px;
 }
 
 ::selection {
-  background: rgba(59, 130, 246, 0.3);
-  color: #f1f5f9;
+  background: rgba(201, 123, 61, 0.25);
+  color: #f5f1ea;
 }
 
 .glass {
-  background: rgba(19, 27, 46, 0.6);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(148, 163, 184, 0.08);
+  background: rgba(28, 25, 22, 0.92);
+  border: 1px solid rgba(245, 241, 234, 0.08);
 }
 
 .glass-card {
-  background: rgba(19, 27, 46, 0.5);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(148, 163, 184, 0.06);
-  transition: all 0.3s ease;
+  background: #1c1916;
+  border: 1px solid rgba(245, 241, 234, 0.08);
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .glass-card:hover {
-  border-color: rgba(59, 130, 246, 0.25);
+  border-color: rgba(201, 123, 61, 0.35);
   transform: translateY(-4px);
-  box-shadow: 0 8px 40px rgba(59, 130, 246, 0.1), 0 0 60px rgba(139, 92, 246, 0.03);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #3b82f6, #8b5cf6, #f59e0b);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #c97b3d;
 }
 
 .gradient-border {
   position: relative;
+  border: 1px solid rgba(245, 241, 234, 0.14);
+  transition: border-color 0.2s ease;
 }
 
-.gradient-border::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  padding: 1px;
-  background: linear-gradient(135deg, #3b82f6, #8b5cf6, #f59e0b);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
+.gradient-border:hover {
+  border-color: rgba(201, 123, 61, 0.5);
 }
 
 .section-heading {
-  font-size: 2.25rem;
-  font-weight: 700;
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 600;
   text-align: center;
   margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
 }
 
 .section-subtitle {
-  color: #94a3b8;
+  color: #a39a8c;
   text-align: center;
   margin-bottom: 3rem;
   font-size: 1.05rem;
 }
 
 .glow {
-  box-shadow: 0 0 20px rgba(59, 130, 246, 0.15), 0 0 40px rgba(139, 92, 246, 0.05);
+  box-shadow: 0 0 24px rgba(201, 123, 61, 0.12);
+}
+
+.btn-press {
+  transition: transform 0.12s ease, background-color 0.15s ease;
+}
+
+.btn-press:active {
+  transform: scale(0.96);
 }
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus {
-  -webkit-text-fill-color: #f1f5f9;
-  -webkit-box-shadow: 0 0 0px 1000px #0d1321 inset;
+  -webkit-text-fill-color: #f5f1ea;
+  -webkit-box-shadow: 0 0 0px 1000px #1c1916 inset;
   transition: background-color 5000s ease-in-out 0s;
 }
 
 @media (max-width: 640px) {
   .section-heading {
-    font-size: 1.75rem;
+    font-size: 1.9rem;
   }
   .section-subtitle {
     font-size: 0.95rem;
