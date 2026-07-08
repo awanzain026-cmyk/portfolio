@@ -1,4 +1,5 @@
-import puppeteer from "puppeteer";
+import puppeteer from "puppeteer-core";
+import chromium from "@sparticuz/chromium";
 import { createServer } from "http";
 import { readFile, writeFile } from "fs/promises";
 import path from "path";
@@ -47,10 +48,12 @@ async function prerender() {
   console.log("[prerender] Starting local static server...");
   const server = await startServer();
 
-  console.log("[prerender] Launching headless browser...");
+  console.log("[prerender] Launching serverless-compatible headless browser...");
   const browser = await puppeteer.launch({
-    headless: true,
-    args: ["--no-sandbox", "--disable-setuid-sandbox"],
+    args: [...chromium.args, "--no-sandbox", "--disable-setuid-sandbox"],
+    defaultViewport: chromium.defaultViewport,
+    executablePath: await chromium.executablePath(),
+    headless: chromium.headless,
   });
 
   try {
@@ -77,5 +80,7 @@ async function prerender() {
 
 prerender().catch((err) => {
   console.error("[prerender] Failed:", err);
-  process.exit(1);
+  // Don't fail the whole deployment if prerendering breaks -- ship the normal SPA build instead
+  console.error("[prerender] Continuing with standard (non-prerendered) build.");
+  process.exit(0);
 });
