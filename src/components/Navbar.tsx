@@ -38,11 +38,11 @@ export default function Navbar() {
           className="flex items-center gap-2"
           whileHover={{ scale: 1.05 }}
         >
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-blue-600 to-purple-600 text-sm font-bold text-white shadow-lg shadow-blue-500/20">
+          <span className="font-display flex h-9 w-9 items-center justify-center rounded-lg bg-accent text-sm font-bold text-[#14120f]">
             MZ
           </span>
-          <span className="text-lg font-semibold tracking-tight text-white">
-            <span className="gradient-text">M.Zain</span>
+          <span className="font-display text-lg font-medium tracking-tight text-white">
+            M.Zain
           </span>
         </motion.a>
 
