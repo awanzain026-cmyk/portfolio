@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node prerender.js",
+    "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint"
   },
@@ -23,8 +23,6 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "puppeteer-core": "^25.2.1",
-    "@sparticuz/chromium": "^131.0.1",
     "tailwindcss": "^4.3.1",
     "typescript": "^5"
   }
