@@ -68,9 +68,21 @@ async function prerender() {
 
     const html = await page.content();
     const outPath = path.join(distDir, "index.html");
+
+    // Verify the output contains rendered content, not just the empty shell
+    const rootDiv = html.match(/<div id="root">([\s\S]*?)<\/div>/);
+    const rootContent = rootDiv ? rootDiv[1].trim() : "";
+
+    if (!rootContent || rootContent.length < 100) {
+      throw new Error(
+        `[prerender] Rendered HTML contains no meaningful content inside #root. ` +
+        `Length: ${rootContent.length} bytes. The prerender step failed to capture the page.`
+      );
+    }
+
     await writeFile(outPath, html, "utf-8");
     console.log(
-      `[prerender] Wrote fully rendered HTML to dist/index.html (${html.length} bytes)`
+      `[prerender] Wrote fully rendered HTML to dist/index.html (${html.length} bytes, #root content: ${rootContent.length} bytes)`
     );
   } finally {
     await browser.close();
@@ -80,7 +92,6 @@ async function prerender() {
 
 prerender().catch((err) => {
   console.error("[prerender] Failed:", err);
-  // Don't fail the whole deployment if prerendering breaks -- ship the normal SPA build instead
-  console.error("[prerender] Continuing with standard (non-prerendered) build.");
-  process.exit(0);
+  console.error("[prerender] Build aborted — prerendering did not produce valid output.");
+  process.exit(1);
 });
