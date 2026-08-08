@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://portfolio-flax-tau-30.vercel.app/sitemap.xml
+Sitemap: https://zainawanai.me/sitemap.xml
