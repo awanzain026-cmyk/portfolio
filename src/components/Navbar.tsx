@@ -83,11 +83,11 @@ export default function Navbar() {
                   href={link.href}
                   onClick={(e) => {
                     e.preventDefault();
-                    const target = document.querySelector(link.href);
-                    if (target) {
-                      target.scrollIntoView({ behavior: "smooth" });
-                    }
-                    setTimeout(() => setMobileOpen(false), 300);
+                    setMobileOpen(false);
+                    setTimeout(() => {
+                      const target = document.querySelector(link.href);
+                      if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+                    }, 350);
                   }}
                   className="rounded-lg px-4 py-3 text-sm font-medium text-zinc-300 transition-colors hover:bg-white/5 hover:text-white"
                 >

@@ -71,7 +71,7 @@ const item = {
 
 export default function Projects() {
   return (
-    <section id="projects" className="relative px-6 py-24 sm:py-32">
+    <section id="projects" className="relative scroll-mt-24 px-6 py-24 sm:py-32">
       <div className="mx-auto max-w-6xl">
         <motion.h2
           className="section-heading"

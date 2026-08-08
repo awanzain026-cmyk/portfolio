@@ -34,7 +34,7 @@ const item = {
 
 export default function Skills() {
   return (
-    <section id="skills" className="relative px-6 py-24 sm:py-32">
+    <section id="skills" className="relative scroll-mt-24 px-6 py-24 sm:py-32">
       <div className="mx-auto max-w-6xl">
         <motion.h2
           className="section-heading"
